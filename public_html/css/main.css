@@ -1,0 +1,43 @@
+
+/* editor css */
+.editor {
+    border: solid 1px #CCC;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 130px;
+    padding: 20px;
+}
+
+.editor-input {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFF #FFF #CCC #FFF;
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
+}
+
+.editor-content{
+    font-size: 16px;
+}
+
+.editor-raw {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
