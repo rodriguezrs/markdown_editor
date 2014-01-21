@@ -30,21 +30,24 @@ var app = {
             var raw_holder = $("<div></div>").addClass('editor-raw');
             
             raw_holder.text(app.input.val());
-            html_holder.html(app.converter.makeHtml(app.input.val()));
+            html_holder.html(app.converter.makeHtml(app.input.val() || "&nbsp;"));
 
             app.input.before(raw_holder).before(html_holder);
             app.input.val("");
         },
         isOnEmpty: function(){
+            console.log('isOnEmpty');
             if(app.input.val().length == 0){
                 this.makeEditable();
             }
         },
         makeEditable: function(){
-            var raw = app.input.prev('.editor-raw');
+            console.log('makeEditable');
             var html = app.input.prev('.editor-content');
+            var raw = html.prev('.editor-raw');
             
-            app.input.val(raw.html());
+            
+            app.input.val(raw.text() + " ");
             html.remove();
             raw.remove();
         }
